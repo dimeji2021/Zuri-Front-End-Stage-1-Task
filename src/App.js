@@ -3,30 +3,27 @@ import "primereact/resources/themes/saga-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
-import { Avatar } from "primereact/avatar";
-import { Badge } from "primereact/badge";
+
+import { Button } from "primereact/button";
+import { Profile } from './component/Profile';
+
 function App() {
   return (
-    <div className='p-m-4'>
-      <div className='p-d-flex p-jc-center p-ai-center'>
-        <Avatar image="kehindeAregbesola.jpg" size="xlarge" 
-        shape="circle" className='p-overlay-badge'>
-          <Badge value="4" severity="info" />
-        </Avatar>
-      </div>
-      <div className='p-d-flex p-jc-center'>
-        Kehinde Aregbesola
-      </div>
 
-      {/* <div class="card">
-        <div class="flex flex-column card-container green-container">
-          <div class="flex align-items-center justify-content-center h-4rem bg-green-500 font-bold text-white border-round m-2">1</div>
-          <div class="flex align-items-center justify-content-center h-4rem bg-green-500 font-bold text-white border-round m-2">2</div>
-          <div class="flex align-items-center justify-content-center h-4rem bg-green-500 font-bold text-white border-round m-2">3</div>
+    <div className="p-m-4">
+      <Profile/>
+      <div className="p-d-flex p-jc-center">
+        <div className='p-d-flex p-flex-column'>
+          <Button className="p-p-3">
+            <i className="pi pi-youtube p-px-2">1</i>
+            <span className="p-px-3">Youtube</span>
+          </Button>
+          <Button className="p-p-3">
+            <i className="pi pi-twitter p-px-2">1</i>
+            <span className="p-px-3">Twitter</span>
+          </Button>
         </div>
-      </div> */}
-
-
+      </div>
     </div>
   );
 }
