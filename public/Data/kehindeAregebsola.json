@@ -1,0 +1,38 @@
+{
+    "name": "Kehinde Aregebsola",
+    "bio": "Software Engineer",
+    "avatar": "https://avatars.githubusercontent.com/u/96235518?v=4",
+    "links": [
+        {
+            "name": "Twitter Link",
+            "url": "",
+            "icon": "twitter"
+        },
+        {
+            "name": "Zuri Teams",
+            "url": "",
+            "icon": "teams"
+        },
+        {
+            "name": "Zuri Books",
+            "url": "",
+            "icon": "books"
+        },
+        {
+            "name": "Python books",
+            "url": "",
+            "icon": "python"
+        },
+        {
+            "name": "Background Check for Coders",
+            "url": "",
+            "icon": "coders"
+        },
+        {
+            "name": "Design Books",
+            "url": "",
+            "icon": "design"
+        }
+    ] 
+
+}

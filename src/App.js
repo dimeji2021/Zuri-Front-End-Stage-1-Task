@@ -4,26 +4,27 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import "primeflex/primeflex.css";
 
-import { Button } from "primereact/button";
 import { Profile } from './component/Profile';
+import { useEffect, useState } from 'react';
+import { Links } from './component/Links';
 
 function App() {
+  const [profile, setProfile] = useState({
+    name: "Kehinde Aregebsola",
+    bio: "Software Engineer",
+    avatar: "https://avatars.githubusercontent.com/u/96235518?v=4",
+    links: [], 
+  })
+  useEffect(()=>{
+    fetch("/data/kehindeAregebsola.json")
+    .then((response)=>response.json())
+    .then((data)=>setProfile(data));
+  },[]);
   return (
 
     <div className="p-m-4">
-      <Profile/>
-      <div className="p-d-flex p-jc-center">
-        <div className='p-d-flex p-flex-column'>
-          <Button className="p-p-3">
-            <i className="pi pi-youtube p-px-2">1</i>
-            <span className="p-px-3">Youtube</span>
-          </Button>
-          <Button className="p-p-3">
-            <i className="pi pi-twitter p-px-2">1</i>
-            <span className="p-px-3">Twitter</span>
-          </Button>
-        </div>
-      </div>
+      <Profile name={profile.name} avatar={profile.avatar}/>
+      <Links links={profile.links}/>
     </div>
   );
 }
